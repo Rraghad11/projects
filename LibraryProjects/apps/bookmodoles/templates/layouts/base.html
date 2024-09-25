@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Site{% endblock %}</title>
+    {% load static %}
+   
+    <link rel="stylesheet" href="{% static 'main.css' %}">  <!-- Updated path -->
+    <style>
+        body {
+            background-color: rgb(190, 143, 88); /* Temporary test style */
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>My Site Header</h1>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Default content, overridden by home.html -->
+        {% endblock %}
+    </main>
+
+    <footer>
+       
+    </footer>
+</body>
+</html>
